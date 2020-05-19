@@ -24,7 +24,7 @@ def implicit():
 
     # If you don't specify credentials when constructing the client, the
     # client library will look for credentials in the environment.
-    storage_client = storage.Client('C:/Users/Joshua/PythonWorkspace/kaggle/Kaggle/My Project-22f04fa6f12a.json')
+    storage_client = storage.Client('')
 
     # Make an authenticated API request
     buckets = list(storage_client.list_buckets())
@@ -39,7 +39,7 @@ def explicit():
     # Explicitly use service account credentials by specifying the private key
     # file.
     storage_client = storage.Client.from_service_account_json(
-        'C:/Users/Joshua/PythonWorkspace/kaggle/Kaggle/My Project-22f04fa6f12a.json')
+        '')
 
     # Make an authenticated API request
     buckets = list(storage_client.list_buckets())
